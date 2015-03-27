@@ -13,24 +13,49 @@
 <div data-role="header">
 	<h1>Contact APP</h1>
 </div>
-<div data-role="page" id="contact" class="active">
-	<h3>Contact list</h3>
-    <div id="id"></div>
-    <div id="name"></div>
-    <div id="number"></div>
-    <div id="lat"></div>
-    <div id="lng"></div>
+
+<div class="wrapper">
+ 	<!--home page shows the contact list with max of 12-->
+    <div data-role="page" id="home">
+        <h3>Contact list</h3>
+        <ul data-role="listview">
+          
+        </ul>
+    </div>
+    <!--half transparet layer on the top of home page-->
+    <div data-role="overlay">&nbsp;</div>
+    <!-----contact information modal----->
+    <div data-role="modal">
+        <form>
+			<div id="bottle"></div>
+            <div class="formbox">
+                <input type="button" id="btnClose" value="Go back" class="btn"/>
+            </div>
+        </form>
+    </div>
+	<!-------map modal---------->
+    <div data-role="map" id="map">
+    	<div id="bottleMap"></div>
+        <div id="box" style="width:100%; height:80%;"></div>
+        <form>
+            <div class="formbox">
+                <input type="button" id="btnCloseMap" value="Go back" class="btn"/>
+            </div>
+        </form>
+    </div>
 </div>
-<div data-role="page" id="map">
-	<div id="box"></div>
-</div>
+
 <div data-role="footer">
 	<p>Footer</p>
 </div>
 
 
 
-<!----<script type="text/javascript" src="cordova.js"></script>--->
+<script type="text/javascript" src="cordova.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkK6GGteS9dGdVN9o_2Rs2xiLKGMgzJqM"
+  type="text/javascript"></script>
+<script type="text/javascript" src="js/hammer.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+
 </body>
 </html>
